@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captación de Propiedades - TuAlquiler</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Roboto', sans-serif; margin:0; padding:0; color:#333; overflow-x:hidden; }
+        header { display:flex; justify-content:space-between; align-items:center; padding:20px 50px; background:#ffffff; box-shadow:0 2px 5px rgba(0,0,0,0.1); position:sticky; top:0; z-index:100; }
+        header h1 { font-size:1.5em; color:#3498db; margin:0; }
+        nav a { margin-left:25px; text-decoration:none; color:#333; font-weight:500; }
+
+        .hero { background:url('https://via.placeholder.com/1600x600') no-repeat center center/cover; color:white; text-align:center; padding:120px 20px; position:relative; }
+        .hero::after { content:''; position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.4); }
+        .hero-content { position:relative; z-index:1; }
+        .hero h2 { font-size:3em; margin-bottom:20px; animation:fadeInDown 1s ease forwards; opacity:0; }
+        .hero p { font-size:1.2em; margin-bottom:30px; animation:fadeIn 1.5s ease forwards; opacity:0; }
+        .cta { background:#e67e22; color:white; padding:15px 35px; text-decoration:none; border-radius:5px; font-weight:bold; transition:0.3s; }
+        .cta:hover { background:#d35400; }
+
+        @keyframes fadeInDown { from { opacity:0; transform:translateY(-20px); } to { opacity:1; transform:translateY(0); } }
+        @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+        section { padding:60px 20px; max-width:1200px; margin:auto; }
+        .beneficios, .pasos, .testimonios { display:flex; flex-wrap:wrap; gap:30px; justify-content:center; }
+        .beneficio, .paso, .testimonial { flex:1 1 280px; padding:30px; border-radius:10px; text-align:center; transition: transform 0.3s; }
+        .beneficio:hover, .paso:hover, .testimonial:hover { transform:translateY(-5px); }
+        .beneficio { background:#f4f4f4; box-shadow:0 4px 6px rgba(0,0,0,0.1); }
+        .beneficio img { width:60px; margin-bottom:15px; }
+        .paso { background:#3498db; color:white; box-shadow:0 4px 6px rgba(0,0,0,0.1); }
+        .paso img { width:60px; margin-bottom:15px; }
+        .testimonial { background:#f4f4f4; font-style:italic; box-shadow:0 4px 6px rgba(0,0,0,0.1); position:relative; }
+        .testimonial img { width:60px; height:60px; border-radius:50%; margin-bottom:15px; }
+
+        .testimonial-slider { display:flex; overflow:hidden; position:relative; }
+        .testimonial-track { display:flex; transition:transform 0.5s ease; }
+
+        form { display:flex; flex-direction:column; gap:15px; max-width:600px; margin:auto; }
+        input, textarea { padding:15px; font-size:1em; border:1px solid #ccc; border-radius:5px; }
+        button { background:#3498db; color:white; border:none; padding:15px; font-size:1em; border-radius:5px; cursor:pointer; font-weight:bold; transition:0.3s; }
+        button:hover { background:#2980b9; }
+
+        footer { background:#2c3e50; color:white; text-align:center; padding:40px 20px; margin-top:40px; }
+        footer a { color:#e67e22; text-decoration:none; font-weight:bold; }
+
+        @media(max-width:768px){
+            header { flex-direction:column; }
+            nav { margin-top:10px; }
+            .beneficios, .pasos, .testimonios { flex-direction:column; }
+            .hero h2 { font-size:2.2em; }
+            .hero { padding:80px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>TuAlquiler</h1>
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#beneficios">Beneficios</a>
+        <a href="#como-funciona">Cómo Funciona</a>
+        <a href="#contacto">Publica tu vivienda</a>
+        <a href="#testimonios">Testimonios</a>
+    </nav>
+</header>
+
+<section class="hero" id="inicio">
+    <div class="hero-content">
+        <h2>Gestiona tu propiedad de forma fácil y rentable</h2>
+        <p>Publica tu vivienda y empieza a generar ingresos sin complicaciones.</p>
+        <a href="#contacto" class="cta">Publica tu vivienda</a>
+    </div>
+</section>
+
+<section id="beneficios">
+    <h2 style="text-align:center; margin-bottom:40px;">Beneficios de trabajar con nosotros</h2>
+    <div class="beneficios">
+        <div class="beneficio">
+            <img src="https://via.placeholder.com/60" alt="Visibilidad">
+            <h3>Mayor Visibilidad</h3>
+            <p>Promocionamos tu propiedad en múltiples canales para asegurar ocupación.</p>
+        </div>
+        <div class="beneficio">
+            <img src="https://via.placeholder.com/60" alt="Gestión">
+            <h3>Gestión Profesional</h3>
+            <p>Nos encargamos de reservas, limpieza y mantenimiento de tu propiedad.</p>
+        </div>
+        <div class="beneficio">
+            <img src="https://via.placeholder.com/60" alt="Ingresos">
+            <h3>Ingresos Adicionales</h3>
+            <p>Maximiza tus ganancias sin esfuerzo y con total seguridad.</p>
+        </div>
+    </div>
+</section>
+
+<section id="como-funciona">
+    <h2 style="text-align:center; margin-bottom:40px;">Cómo Funciona</h2>
+    <div class="pasos">
+        <div class="paso">
+            <img src="https://via.placeholder.com/60" alt="Registro">
+            <h3>1. Registro</h3>
+            <p>Introduce los datos de tu propiedad y súbela a nuestra plataforma.</p>
+        </div>
+        <div class="paso">
+            <img src="https://via.placeholder.com/60" alt="Publicación">
+            <h3>2. Publicación</h3>
+            <p>Nos encargamos de mostrarla en los canales más relevantes.</p>
+        </div>
+        <div class="paso">
+            <img src="https://via.placeholder.com/60" alt="Gestión">
+            <h3>3. Gestión</h3>
+            <p>Recibe reservas, gestionamos check-in y mantenemos tu propiedad en perfecto estado.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contacto">
+    <h2 style="text-align:center; margin-bottom:40px;">Publica tu vivienda</h2>
+    <form>
+        <input type="text" placeholder="Nombre" required>
+        <input type="email" placeholder="Correo electrónico" required>
+        <input type="tel" placeholder="Teléfono" required>
+        <input type="text" placeholder="Dirección de la propiedad" required>
+        <textarea placeholder="Descripción breve" rows="4"></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+    <p style="text-align:center; margin-top:15px;">O contáctanos por WhatsApp: <a href="https://wa.me/tu-numero" target="_blank">Enviar mensaje</a></p>
+</section>
+
+<section id="testimonios">
+    <h2 style="text-align:center; margin-bottom:40px;">Testimonios</h2>
+    <div class="testimonial-slider">
+        <div class="testimonial-track" id="testimonialTrack">
+            <div class="testimonial">
+                <img src="https://via.placeholder.com/60" alt="Juan P.">
+                “Excelente servicio, mi propiedad se alquila sin problemas cada temporada.” – Juan P.
+            </div>
+            <div class="testimonial">
+                <img src="https://via.placeholder.com/60" alt="María L.">
+                “Muy profesional y atento. Todo el proceso fue muy sencillo.” – María L.
+            </div>
+            <div class="testimonial">
+                <img src="https://via.placeholder.com/60" alt="Carlos R.">
+                “Recomiendo totalmente, gestionan todo de manera eficiente.” – Carlos R.
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 TuAlquiler | Todos los derechos reservados</p>
+    <p>Contáctanos por WhatsApp: <a href="https://wa.me/tu-numero" target="_blank">Enviar mensaje</a></p>
+</footer>
+
+<script>
